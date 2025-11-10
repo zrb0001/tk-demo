@@ -8,9 +8,11 @@ class TipWindow:
     def __init__(self, root, window_id, max_windows):
         self.window_id = window_id
         self.max_windows = max_windows
-        self.root = tk.Toplevel(root)
+        self.root = None
+        root.after(1000, lambda: self.run(root))
 
-    def run(self):
+    def run(self, root):
+        self.root = tk.Toplevel(root)
         self.root.configure(bg='pink')
         self.__set_position()
         self.__set_words()

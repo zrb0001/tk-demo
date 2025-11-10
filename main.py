@@ -10,8 +10,7 @@ def draw_window():
 
     num_windows = 64
     for i in range(num_windows):
-        window = TipWindow(root, i + 1, num_windows)
-        window.run()
+        TipWindow(root, i + 1, num_windows)
 
     root.mainloop()
 
